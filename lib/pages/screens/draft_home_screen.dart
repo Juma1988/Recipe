@@ -94,11 +94,12 @@ class _Grid1 extends StatelessWidget {
         },
         child: Container(
           decoration: BoxDecoration(
-            color: colorsDrawer[index],
+            color: Colors.white,
             borderRadius: BorderRadius.circular(8),
             boxShadow: [
               BoxShadow(
-                color: Colors.white.withOpacity(0.25),
+               // color: Colors.black.withOpacity(0.25),
+                color: colorsDrawer[index].withOpacity(0.25),
                 offset: Offset(0, 4),
                 blurRadius: 4,
               ),
@@ -112,7 +113,8 @@ class _Grid1 extends StatelessWidget {
                 images[index],
                 width: 60.w,
                 height: 60.h,
-                color: Color(0xFFFFFFFF),
+                colorFilter:
+                    ColorFilter.mode(colorsDrawer[index], BlendMode.srcIn),
               ),
               SizedBox(height: 12.h),
               Text(
@@ -121,7 +123,7 @@ class _Grid1 extends StatelessWidget {
                   fontWeight: FontWeight.w600,
                   fontSize: 21,
                   fontFamily: 'font',
-                  color: Color(0xFFFFFFFF),
+                  color: colorsDrawer[index],
                 ),
               ),
             ],
@@ -165,12 +167,12 @@ class _Grid2 extends StatelessWidget {
         },
         child: Container(
           decoration: BoxDecoration(
-            color: colorsDrawer[index + 1],
+            color: Colors.white,
             borderRadius: BorderRadius.circular(8),
             boxShadow: [
               BoxShadow(
                 // color: Colors.black.withOpacity(0.25),
-                color: Colors.white.withOpacity(0.25),
+                color: colorsDrawer[index + 1].withOpacity(0.25),
                 offset: Offset(0, 4),
                 blurRadius: 4,
               ),
@@ -184,7 +186,8 @@ class _Grid2 extends StatelessWidget {
                 images[index + 1],
                 width: 60.w,
                 height: 60.h,
-                color: Color(0xFFFFFFFF),
+                colorFilter:
+                    ColorFilter.mode(colorsDrawer[index + 1], BlendMode.srcIn),
               ),
               SizedBox(height: 12.h),
               Text(
@@ -193,7 +196,7 @@ class _Grid2 extends StatelessWidget {
                   fontWeight: FontWeight.w600,
                   fontSize: 21,
                   fontFamily: 'font',
-                  color: Colors.white,
+                  color: colorsDrawer[index + 1],
                 ),
               ),
             ],
