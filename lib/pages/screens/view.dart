@@ -2,9 +2,9 @@ import 'dart:math';
 
 import 'package:app/core/design/navigator.dart';
 import 'package:app/core/string.dart';
-import 'package:app/pages/page03_details_view.dart';
-import 'package:app/pages/sup_page01_email.dart';
-import 'package:app/pages/sup_page02_source.dart';
+import 'package:app/pages/screens/details_view.dart';
+import 'package:app/pages/pages/contact_us.dart';
+import 'package:app/pages/pages/references.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';

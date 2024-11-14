@@ -1,9 +1,7 @@
 import 'package:app/core/design/navigator.dart';
 import 'package:app/core/design/theme.dart';
 import 'package:app/core/logic/service_locator.dart';
-import 'package:app/pages/sup_page01_email.dart';
-import 'package:app/pages/page01_home_screen.dart';
-import 'package:app/pages/sup_page02_source.dart';
+import 'package:app/pages/screens/home_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
@@ -27,7 +25,7 @@ class MyApp extends StatelessWidget {
         debugShowCheckedModeBanner: false,
         title: 'ProjectAmit63',
         navigatorKey: navigatorKey,
-        home:  HomeScreen(),
+        home: HomeScreen(),
         theme: lightMode,
         darkTheme: darkMode,
       ),

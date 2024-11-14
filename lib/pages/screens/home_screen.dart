@@ -3,8 +3,8 @@ import 'dart:math';
 import 'package:app/core/design/navigator.dart';
 import 'package:app/core/design/show_msg.dart';
 import 'package:app/core/string.dart';
-import 'package:app/pages/page02_view.dart';
-import 'package:app/pages/page03_details_view.dart';
+import 'package:app/pages/screens/details_view.dart';
+import 'package:app/pages/screens/view.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
@@ -71,7 +71,9 @@ class _Grid1 extends StatelessWidget {
         crossAxisCount: 1,
         crossAxisSpacing: 16.w,
         mainAxisSpacing: 16.h,
-        childAspectRatio: MediaQuery.of(context).size.width.w / MediaQuery.of(context).size.width/0.4.h,
+        childAspectRatio: MediaQuery.of(context).size.width.w /
+            MediaQuery.of(context).size.width /
+            0.4.h,
       ),
       itemBuilder: (context, index) => InkWell(
         enableFeedback: true,
