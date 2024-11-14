@@ -1,9 +1,11 @@
 import 'dart:convert';
 
 import 'package:app/core/design/outline_button.dart';
+import 'package:app/core/design/show_msg.dart';
 import 'package:app/core/design/textfiled.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:lottie/lottie.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 class EmailView extends StatefulWidget {
@@ -62,25 +64,30 @@ class _EmailViewState extends State<EmailView> {
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
               Center(
-                child: Image.asset(
-                  'assets/images/email+page.jpg',
-                  width: 260,
-                  height: 260,
+                child:
+                    // Image.asset(
+                    //   'assets/images/email+page.jpg',
+                    Lottie.network(
+                  'https://assets5.lottiefiles.com/packages/lf20_u25cckyh.json',
+                  width: 240,
+                  height: 240,
                   fit: BoxFit.cover,
                 ),
               ),
               SizedBox(height: 24.h),
-              Center(
-                child: Text(
-                  textAlign: TextAlign.center,
-                  msg,
-                  style: TextStyle(
-                      fontFamily: 'title_font',
-                      fontSize: 18,
-                      fontWeight: FontWeight.w400),
-                ),
-              ),
-              SizedBox(height: 40.h),
+              dropDownValue == ''
+                  ? Center(
+                      child: Text(
+                        textAlign: TextAlign.center,
+                        msg,
+                        style: TextStyle(
+                            fontFamily: 'title_font',
+                            fontSize: 18,
+                            fontWeight: FontWeight.w400),
+                      ),
+                    )
+                  : SizedBox(),
+              SizedBox(height: 24.h),
               AppTextField(
                 label: 'الاسم',
                 hint: 'حقل اختياري',
@@ -107,9 +114,9 @@ class _EmailViewState extends State<EmailView> {
                       DropdownMenuItem(
                           child: Text('اقتراحات للميزات الجديدة'),
                           value: 'Suggestions for new features'),
-                      DropdownMenuItem(
-                          child: Text('المشاركة في تطوير البرنامج'),
-                          value: 'Participate in program development'),
+                      // DropdownMenuItem(
+                      //     child: Text('المشاركة في تطوير البرنامج'),
+                      //     value: 'Participate in program development'),
                       DropdownMenuItem(
                           child: Text('مشاركة تجارب الاستخدام'),
                           value: 'Share user experiences'),
@@ -130,25 +137,35 @@ class _EmailViewState extends State<EmailView> {
               dropDownValue == ''
                   ? const SizedBox.shrink()
                   : dropDownValue == 'Evaluation'
-                      ? _field('Evaluation')
+                      ? _field(
+                          'نحن متحمسون لسماع رأيك حول برنامج وصفات !\n هدفنا هو تقديم أفضل تجربة ممكنة لك،\n ورأيك يساعدنا في تحقيق ذلك.\n نشكرك علي مشاركتنا أفكارك واقتراحاتك')
                       : dropDownValue == 'Suggestions for new features'
-                          ? _field('Suggestions for new features')
-                          : dropDownValue ==
-                                  'Participate in program development'
-                              ? _field('Participate in program development')
-                              : dropDownValue == 'Share user experiences'
-                                  ? _field('Share user experiences')
-                                  : _field('Submitting feedback'),
-              SizedBox(height: 20.h),
-              AppButton(
-                label: 'Send mail',
-                fillColor: Theme.of(context).colorScheme.primary,
-                onPressed: () => sendEmail(
-                  name: nameController,
-                  title: titleController,
-                  body: bodyController,
-                ),
-              )
+                          ? _field(
+                              'هل لديك ميزة جديدة ترغب في رؤيتها؟\n شاركنا اقتراحك!\n مساعدتك في تطوير منتجاتنا هي شراكة نعتز بها.\n سواء كانت فكرة صغيرة أو كبيرة.')
+                          // : dropDownValue ==
+                          //         'Participate in program development'
+                          //     ? _field('Participate in program development')
+                          : dropDownValue == 'Share user experiences'
+                              ? _field(
+                                  'أهلاً بك! يسعدنا أنك هنا.\n هل لديك أي تجربة أو تعليق حول  وصفات ؟\n شاركنا إياها لنساعدنا على تحسين خدمتنا لك\n وللمستخدمين الآخرين.')
+                              : _field(
+                                  'هل لديك أي أفكار لتحسين الوصفات\n أو اضافة وصفات جديدة ترغب في مشاركتها؟\n شاركنا رأيك الآن!'),
+              SizedBox(height: 16.h),
+              dropDownValue == ''
+                  ? SizedBox()
+                  : AppButton(
+                      label: 'Send mail',
+                      fillColor: Theme.of(context).colorScheme.primary,
+                      onPressed: () {
+                        sendEmail(
+                          name: nameController,
+                          title: titleController,
+                          body: bodyController,
+                        );
+                        appShowMsg('نشكرك لتواصلك معنا, سيتم الرد في اسرع وقت');
+                        bodyController.text = '';
+                      },
+                    )
             ],
           ),
         ),
@@ -160,6 +177,11 @@ class _EmailViewState extends State<EmailView> {
     return AppTextField(
       controller: bodyController,
       label: txt,
+      align: TextAlign.center,
+      float: FloatingLabelBehavior.never,
+      style: TextStyle(
+          overflow: TextOverflow.ellipsis,
+          textBaseline: TextBaseline.alphabetic),
       maxLines: 4,
     );
   }
