@@ -45,7 +45,7 @@ flutter:
   assets:
     - assets/images/
     - assets/images/lunch/
-    - assets/images/soup/
+    - assets/images/soups/
     - assets/images/salads/
     - assets/images/sauces/
     - assets/images/sweets/

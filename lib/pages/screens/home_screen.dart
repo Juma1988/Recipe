@@ -98,7 +98,8 @@ class _Grid1 extends StatelessWidget {
             borderRadius: BorderRadius.circular(8),
             boxShadow: [
               BoxShadow(
-                color: Colors.black.withOpacity(0.25),
+               // color: Colors.black.withOpacity(0.25),
+                color: colorsDrawer[index].withOpacity(0.25),
                 offset: Offset(0, 4),
                 blurRadius: 4,
               ),
@@ -170,7 +171,8 @@ class _Grid2 extends StatelessWidget {
             borderRadius: BorderRadius.circular(8),
             boxShadow: [
               BoxShadow(
-                color: Colors.black.withOpacity(0.25),
+                // color: Colors.black.withOpacity(0.25),
+                color: colorsDrawer[index + 1].withOpacity(0.25),
                 offset: Offset(0, 4),
                 blurRadius: 4,
               ),
