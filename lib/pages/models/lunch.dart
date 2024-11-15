@@ -6,9 +6,152 @@ final lunch = <Map<String, dynamic>>[
     'stats': false,
     'ingredients_count': 7,
     'steps_count': 5,
+    'title_en': 'Crispy Potato Fingers',
+    'title_ar': 'البطاطس الجمبري\n المقرمشه',
+    'image': 'assets/images/lunch/crispy_potato_fingers.jpg',
+    'ingredients': [
+      {'item': 'بطاطس', 'quantity': 'حسب الرغبة'},
+      {'item': 'دقيق', 'quantity': '2 كوب'},
+      {'item': 'نشا', 'quantity': '1 كوب'},
+      {'item': 'ملح', 'quantity': 'ملعقة صغيرة'},
+      {'item': 'بابريكا', 'quantity': 'ملعقة صغيرة'},
+      {'item': 'توم بودر', 'quantity': 'ملعقة صغيرة'},
+      {'item': 'فلفل أسود', 'quantity': 'رشة'}
+    ],
+    'steps': [
+      'قطعي البطاطس إلى أصابع.',
+      'اغلي البطاطس في ماء مغلي لمدة دقيقة واحدة.',
+      'اخلطي الدقيق والنشا والبهارات والماء حتى تحصلي على خليط سائل.',
+      'اغمس أصابع البطاطس في الخليط.',
+      'اقلي البطاطس في زيت ساخن حتى يصبح لونها ذهبياً.',
+      'صفّي البطاطس على ورق المطبخ للتخلص من الزيت الزائد.'
+    ]
+  },
+  {
+    'level': 'سهل',
+    'prep_time': 10,
+    'cook_time': 5,
+    'stats': false,
+    'ingredients_count': 8,
+    'steps_count': 4.8,
+    'title_en': 'Chicken and Cheese Wraps',
+    'title_ar': 'لفائف الدجاج\n بالجبن والثوم',
+    'image': 'assets/images/lunch/chicken_cheese_wraps.jpg',
+    'ingredients': [
+      {'item': 'دجاج مطبوخ', 'quantity': '2 كوب'},
+      {'item': 'جبنة موتزاريلا', 'quantity': '1/2 كوب'},
+      {'item': 'جبنة شيدر', 'quantity': '1/2 كوب'},
+      {'item': 'ثوم', 'quantity': '2 فص'},
+      {'item': 'زبدة', 'quantity': '2 ملعقة كبيرة'},
+      {'item': 'كريمة حامضة', 'quantity': '1/4 كوب'},
+      {'item': 'مايونيز', 'quantity': '1/4 كوب'},
+      {'item': 'تورتيلا', 'quantity': '4 قطع'},
+      {'item': 'ملح وفلفل', 'quantity': 'حسب الرغبة'},
+      {'item': 'بقدونس طازج', 'quantity': 'للتزيين'}
+    ],
+    'steps': [
+      'تذوب الزبدة في مقلاة وتُقلى الثوم.',
+      'يُخلط الدجاج والجبن والكريمة الحامضة والمايونيز والثوم.',
+      'يُقسم الخليط بالتساوي بين التورتيلا.',
+      'تُلف التورتيلا بإحكام.',
+      'يُحمص اللفائف في مقلاة حتى يذوب الجبن.',
+      'يُزين بالبقدونس ويُقدم.'
+    ]
+  },
+  {
+    'level': 'سهل',
+    'prep_time': 30,
+    'cook_time': 15,
+    'stats': false,
+    'ingredients_count': 9,
+    'steps_count': 3,
+    'title_en': 'Marinated Grilled Chicken',
+    'title_ar': 'شيش طاووق',
+    'image': 'assets/images/lunch/shish_tawook.jpg',
+    'ingredients': [
+      {'item': 'صدور دجاج', 'quantity': 'حسب الرغبة'},
+      {'item': 'لبن زبادي', 'quantity': 'حسب الكمية'},
+      {'item': 'عصير ليمون', 'quantity': 'حسب الرغبة'},
+      {'item': 'ثوم', 'quantity': '2-3 فصوص'},
+      {'item': 'بصل بودرة', 'quantity': '1/2 ملعقة صغيرة'},
+      {'item': 'بابريكا', 'quantity': '1/2 ملعقة صغيرة'},
+      {'item': 'كركم', 'quantity': '1/4 ملعقة صغيرة'},
+      {'item': 'فلفل أسود', 'quantity': '1/4 ملعقة صغيرة'},
+      {'item': 'ملح', 'quantity': 'حسب الرغبة'}
+    ],
+    'steps': [
+      'تتبيلة الدجاج: اخلطي جميع مكونات التتبيلة في وعاء واحد وتأكدي من تغطية قطع الدجاج بشكل كامل.',
+      'الشوي: سخني الشواية أو مقلاة تيفال واشوي قطع الدجاج حتى تنضج وتصبح ذهبية اللون.',
+      'الصلصة: ضعي التتبيلة المتبقية في مقلاة صغيرة على نار هادئة وقلبي حتى تتسبك قليلاً.'
+    ]
+  },
+  {
+    'level': 'سهل',
+    'prep_time': 15,
+    'cook_time': 10,
+    'stats': false,
+    'ingredients_count': 5,
+    'steps_count': 3.5,
+    'title_en': 'Grilled Steak',
+    'title_ar': 'شرائح ستيك مشوية',
+    'image': 'assets/images/lunch/grilled_steak.jpg',
+    'ingredients': [
+      {'item': 'شرائح ستيك', 'quantity': 'حسب الرغبة'},
+      {'item': 'زيت زيتون', 'quantity': 'حسب الحاجة'},
+      {'item': 'ملح', 'quantity': 'حسب الرغبة'},
+      {'item': 'فلفل أسود', 'quantity': 'حسب الرغبة'},
+      {'item': 'بهارات ستيك', 'quantity': 'اختياري'}
+    ],
+    'steps': [
+      'تبلي شرائح الستيك بالزيت والملح والفلفل والبهارات.',
+      'سخني الشواية أو مقلاة تيفال على نار عالية.',
+      'اشوي الستيك لمدة دقيقتين على كل جانب.',
+      'اتركي الستيك يرتاح لمدة 5-10 دقائق قبل التقديم.'
+    ]
+  },
+  {
+    'level': 'سهل',
+    'prep_time': 15,
+    'cook_time': 45,
+    'stats': false,
+    'ingredients_count': 9,
+    'steps_count': 8,
+    'title_en': 'Liver and Gizzard Rice',
+    'title_ar': 'أرز بالكبد والقوانص',
+    'image': 'assets/images/lunch/liver_gizzard_rice.jpg',
+    'ingredients': [
+      {'item': 'أرز مصري', 'quantity': 'كوب ونصف'},
+      {'item': 'كبد وقوانص', 'quantity': 'نصف كيلو'},
+      {'item': 'بصل', 'quantity': 'بصلتان كبيرتان'},
+      {'item': 'ثوم', 'quantity': '3 فصوص'},
+      {'item': 'سمن', 'quantity': 'ملعقة كبيرة'},
+      {'item': 'كركم', 'quantity': 'ملعقة صغيرة'},
+      {'item': 'قرفة', 'quantity': 'نصف ملعقة صغيرة'},
+      {'item': 'فلفل أسود', 'quantity': 'ربع ملعقة صغيرة'},
+      {'item': 'ملح', 'quantity': 'حسب الرغبة'}
+    ],
+    'steps': [
+      'اغسلي الكبد والقوانص وقطعيها.',
+      'حمري الكبد والقوانص.',
+      'اقلي البصل والثوم.',
+      'أضيفي التوابل.',
+      'أضيفي الأرز وقلبي.',
+      'أضيفي الماء.',
+      'اطهي الأرز على نار هادئة.',
+      'قدمي الأرز ساخناً.'
+    ]
+  },
+  {
+    'level': 'سهل',
+    'prep_time': 15,
+    'cook_time': 20,
+    'stats': false,
+    'ingredients_count': 7,
+    'steps_count': 5,
     'title_en': 'Pasta with Tomato Sauce, Garlic, and Zaatar',
     'title_ar': 'مكرونه بالصلصه\n والتوم والزعتر',
-    'image': 'assets/images/lunch/pasta_tomato_garlic_zaatar.jpg', // Replace with your image path
+    'image': 'assets/images/lunch/pasta_tomato_garlic_zaatar.jpg',
+    // Replace with your image path
     'ingredients': [
       {'item': 'مكرونة', 'quantity': 'حسب الرغبة'},
       {'item': 'صلصة طماطم', 'quantity': '4-5 ملاعق'},
@@ -87,7 +230,8 @@ final lunch = <Map<String, dynamic>>[
     'steps_count': 8,
     'title_en': 'Green Fava Beans and Rice',
     'title_ar': 'فوليه او الكشري الأخضر\n بالفول الحراتي',
-    'image': 'assets/images/lunch/green_fava_beans_rice.jpg', // Replace with actual image path
+    'image': 'assets/images/lunch/green_fava_beans_rice.jpg',
+    // Replace with actual image path
     'ingredients': [
       {'item': 'فول مقشر ومغسول', 'quantity': 'ربع كيلو'},
       {'item': 'أرز', 'quantity': 'كوبان'},
@@ -117,7 +261,8 @@ final lunch = <Map<String, dynamic>>[
     'steps_count': 7,
     'title_en': 'Smoky Potato Salad',
     'title_ar': 'بطاطس مدخنة',
-    'image': 'assets/images/lunch/smoky_potato_salad.jpg', // Replace with your image path
+    'image': 'assets/images/lunch/smoky_potato_salad.jpg',
+    // Replace with your image path
     'ingredients': [
       {'item': 'بطاطس مقلية', 'quantity': 'حسب الرغبة'},
       {'item': 'بصلة', 'quantity': '1 حبة، مقطعة إلى جوانح'},
@@ -147,7 +292,8 @@ final lunch = <Map<String, dynamic>>[
     'steps_count': 5,
     'title_en': 'Quick Spicy Pasta',
     'title_ar': ' مكرونة مشطشطة',
-    'image': 'assets/images/lunch/quick_spicy_pasta.jpg', // Replace with your image path
+    'image': 'assets/images/lunch/quick_spicy_pasta.jpg',
+    // Replace with your image path
     'ingredients': [
       {'item': 'زيت', 'quantity': 'كمية مناسبة'},
       {'item': 'بصل', 'quantity': '1 حبة، مفروم'},
@@ -1102,7 +1248,7 @@ final lunch = <Map<String, dynamic>>[
     'cook_time': 30,
     'stats': false,
     'ingredients_count': 12,
-    'steps_count': 1,
+    'steps_count': 3.8,
     'title_en': 'One Pot Ground Beef Spaghetti',
     'title_ar': 'اسباجتي باللحمه المفرومه',
     'image': 'assets/images/lunch/ground_beef_spaghetti.jpg',
@@ -1373,7 +1519,6 @@ final lunch = <Map<String, dynamic>>[
       'نقلي في زيت ساخن على نار متوسطة حتى يصبح لونها ذهبياً فاتحاً ثم نصفيها على شبكة معدنية'
     ]
   },
-
   {
     'level': 'سهل',
     'prep_time': 10,
@@ -1391,7 +1536,7 @@ final lunch = <Map<String, dynamic>>[
       {'item': 'فلفل أخضر وأحمر مقطع', 'quantity': 'حسب الرغبة'},
       {'item': 'جبنة موزاريلا', 'quantity': 'حسب الرغبة'},
       {'item': 'زعتر ناشف', 'quantity': 'حسب الرغبة'},
-      {'item': 'زيتون' , 'quantity': 'اختياري'}
+      {'item': 'زيتون', 'quantity': 'اختياري'}
     ],
     'steps': [
       'نجيب التوست ونحط معلقة صغيرة كاتشاب ونحط عليها رشة زعتر ناشف.',
@@ -1410,7 +1555,8 @@ final lunch = <Map<String, dynamic>>[
     'steps_count': 7,
     'title_en': 'Egyptian Omelet',
     'title_ar': 'عجة مصرية',
-    'image': 'assets/images/lunch/egyptian_omelet.jpg', // Replace with your image path
+    'image': 'assets/images/lunch/egyptian_omelet.jpg',
+    // Replace with your image path
     'ingredients': [
       {'item': 'بيض', 'quantity': '4'},
       {'item': 'دقيق', 'quantity': '6 ملاعق كبيرة'},
@@ -1436,8 +1582,7 @@ final lunch = <Map<String, dynamic>>[
       'ندخل الصينية فرن ساخن مسبقاً على درجه حراره 180 في الرف الاوسط مده نصف ساعة أو حتى ينضج بحيث ندخل عود خشبى ويخرج نظيف ثم نضعها تحت الشوايه دقيقه تأخذ لون ذهبى على الوجه.',
       'و يمكن وضع خليط العجه في مقلاة غير لاصقة مدهونة زيت وتسوى على البوتجاز على نار متوسطة ثم نهدئ النار ونغطي المقلاة و عندما تأخذ لون من اسفل نقلبها الناحية الثانيه بحيث ينضج البيض جيدا.'
     ]
-  }
-  ,
+  },
   {
     'level': 'سهل',
     'prep_time': 60,
@@ -1475,7 +1620,6 @@ final lunch = <Map<String, dynamic>>[
       'اخبزيها لمدة 10 إلى 15 دقيقة'
     ]
   },
-
   {
     'level': 'سهل',
     'prep_time': 60,
@@ -1546,7 +1690,7 @@ final lunch = <Map<String, dynamic>>[
     'cook_time': 15,
     'stats': false,
     'ingredients_count': 11,
-    'steps_count':5,
+    'steps_count': 5,
     'title_en': 'Soft Date and Cheese Stuffed Pastry',
     'title_ar': 'قرص طريه \nبالعجوة وبالجبنة',
     'image': 'assets/images/lunch/stuffed_pastry.jpg',
@@ -1570,5 +1714,5 @@ final lunch = <Map<String, dynamic>>[
       'نقسمها كور صغيرة وبعدين نأخذ كل كورة ونضيف الحشوة (عجوة معجونة بـ 2 ملعقه سمسم وملعقه زبدة أو جبنة كيري) ونحضر صينية مدهونة زيت بسيط ونرص القرص',
       'نتركه لمدة نصف ساعة وبعدين تخبز على درجه حراره ٢٠٠ لمدة ١٥ دقيقه'
     ]
-  }
+  },
 ];

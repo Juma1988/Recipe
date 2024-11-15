@@ -22,6 +22,8 @@ class _EmailViewState extends State<EmailView> {
   final titleController = TextEditingController();
   final bodyController = TextEditingController();
   late String dropDownValue = '';
+  late int method = 0;
+
 
   Future<void> sendEmail({
     required TextEditingController name,

@@ -7,28 +7,18 @@ class DetailsView extends StatefulWidget {
   final int itemNumber, categoryNumber;
 
   const DetailsView(
-      {super.key, required this.itemNumber, this.categoryNumber = 0});
+      {super.key, required this.itemNumber, required this.categoryNumber});
 
   @override
   State<DetailsView> createState() => _DetailsViewState();
 }
 
 class _DetailsViewState extends State<DetailsView> {
-  late List<bool> _checkedStatesIngredients;
-  late List<bool> _checkedStatesSteps;
   bool _isFavorite = false;
 
   @override
   void initState() {
     super.initState();
-    _checkedStatesIngredients = List.generate(
-      modelList[widget.categoryNumber][widget.itemNumber]['ingredients'].length,
-      (_) => false,
-    );
-    _checkedStatesSteps = List.generate(
-      modelList[widget.categoryNumber][widget.itemNumber]['steps'].length,
-      (_) => false,
-    );
     _loadFavoriteStatus();
   }
 
@@ -50,15 +40,6 @@ class _DetailsViewState extends State<DetailsView> {
   String _getFavoriteKey() {
     return 'favorite_${widget.categoryNumber}_${widget.itemNumber}';
   }
-
-  late double ingredientsHeight = modelList[widget.categoryNumber]
-              [widget.itemNumber]['ingredients_count']
-          .toDouble() *
-      86.h;
-  late double stepsHeight = modelList[widget.categoryNumber][widget.itemNumber]
-              ['steps_count']
-          .toDouble() *
-      92.h;
 
   @override
   Widget build(BuildContext context) {
@@ -94,140 +75,222 @@ class _DetailsViewState extends State<DetailsView> {
             ),
             SliverList(
               delegate: SliverChildListDelegate([
-                Padding(
-                    padding: const EdgeInsets.all(16).copyWith(bottom: 0),
-                    child: const Row(
-                      children: [
-                        Text(
-                          'المقــادير',
-                          style: TextStyle(
-                              fontSize: 20,
-                              fontWeight: FontWeight.w600,
-                              fontFamily: 'font'),
-                        ),
-                        Expanded(
-                            child: Divider(
-                          color: Color(0xFFA9A9A9),
-                          endIndent: 20,
-                          indent: 20,
-                        )),
-                      ],
-                    )),
-                SizedBox(
-                  height: ingredientsHeight,
-                  child: Center(
-                    child: ListView.builder(
-                      physics: const NeverScrollableScrollPhysics(),
-                      itemCount: modelList[widget.categoryNumber]
-                              [widget.itemNumber]['ingredients']
-                          .length,
-                      itemBuilder: (context, index) => Column(
-                        children: [
-                          Container(
-                            decoration: BoxDecoration(
-                              borderRadius: BorderRadius.circular(8.r),
-                              color: Theme.of(context).colorScheme.surface,
-                              boxShadow: [
-                                BoxShadow(
-                                    color: Colors.black.withOpacity(0.25),
-                                    offset: const Offset(0, 4),
-                                    blurRadius: 4),
-                              ],
-                            ),
-                            child: CheckboxListTile(
-                              controlAffinity: ListTileControlAffinity.leading,
-                              tristate: true,
-                              title: Text(modelList[widget.categoryNumber]
-                                      [widget.itemNumber]['ingredients'][index]
-                                  ['item']),
-                              subtitle: Text(
-                                modelList[widget.categoryNumber]
-                                        [widget.itemNumber]['ingredients']
-                                    [index]['quantity'],
-                                style: TextStyle(
-                                    fontWeight: FontWeight.w200,
-                                    color: Theme.of(context)
-                                        .colorScheme
-                                        .onPrimary
-                                        .withOpacity(0.75)),
-                              ),
-                              value: _checkedStatesIngredients[index],
-                              onChanged: (value) {
-                                setState(() {
-                                  _checkedStatesIngredients[index] =
-                                      value ?? false;
-                                });
-                              },
-                            ),
-                          ),
-                          SizedBox(height: 8.h)
-                        ],
-                      ),
-                    ),
-                  ),
-                ),
-                const SizedBox(height: 16),
-                Padding(
-                    padding: const EdgeInsets.all(16).copyWith(bottom: 0),
-                    child: const Row(
-                      children: [
-                        Text(
-                          'طريقة العمل',
-                          style: TextStyle(
-                              fontSize: 20,
-                              fontWeight: FontWeight.w600,
-                              fontFamily: 'font'),
-                        ),
-                        Expanded(
-                            child: Divider(
-                          color: Color(0xFFA9A9A9),
-                          endIndent: 20,
-                          indent: 20,
-                        )),
-                      ],
-                    )),
-                SizedBox(
-                  height: stepsHeight,
-                  child: Center(
-                    child: ListView.builder(
-                      physics: const NeverScrollableScrollPhysics(),
-                      itemCount: modelList[widget.categoryNumber]
-                              [widget.itemNumber]['steps']
-                          .length,
-                      itemBuilder: (context, index) => Column(
-                        children: [
-                          Container(
-                            decoration: BoxDecoration(
-                              borderRadius: BorderRadius.circular(8.r),
-                              color: Theme.of(context).colorScheme.surface,
-                              boxShadow: [
-                                BoxShadow(
-                                    color: Colors.black.withOpacity(0.25),
-                                    offset: const Offset(0, 4),
-                                    blurRadius: 4),
-                              ],
-                            ),
-                            child: CheckboxListTile(
-                              controlAffinity: ListTileControlAffinity.leading,
-                              tristate: true,
-                              title: Text(modelList[widget.categoryNumber]
-                                  [widget.itemNumber]['steps'][index]),
-                              value: _checkedStatesSteps[index],
-                              onChanged: (value) {
-                                setState(() {
-                                  _checkedStatesSteps[index] = value ?? false;
-                                });
-                              },
-                            ),
-                          ),
-                          SizedBox(height: 8.h)
-                        ],
-                      ),
-                    ),
-                  ),
+                _Title(textTitle: 'المقــادير'),
+                _Ingredients(
+                    categoryNumber: widget.categoryNumber,
+                    itemNumber: widget.itemNumber),
+                SizedBox(height: 16),
+                _Title(textTitle: 'طريقة العمل'),
+                _Steps(
+                  categoryNumber: widget.categoryNumber,
+                  itemNumber: widget.itemNumber,
                 )
               ]),
             )
+          ],
+        ),
+      ),
+    );
+  }
+}
+
+class _Title extends StatelessWidget {
+  final String textTitle;
+
+  const _Title({required this.textTitle});
+
+  @override
+  Widget build(BuildContext context) {
+    return Padding(
+      padding: const EdgeInsets.fromLTRB(16, 16, 16, 0),
+      child: Row(
+        children: [
+          Text(
+            textTitle,
+            style: const TextStyle(
+              fontSize: 20,
+              fontWeight: FontWeight.w600,
+              fontFamily: 'font',
+            ),
+          ),
+          const SizedBox(width: 20), // Added spacing
+          const Expanded(
+            child: Divider(
+              color: Color(0xFFA9A9A9),
+              thickness: 1, // Added for visibility
+            ),
+          ),
+          const SizedBox(width: 20), // Added spacing
+        ],
+      ),
+    );
+  }
+}
+
+class _Ingredients extends StatefulWidget {
+  final int categoryNumber, itemNumber;
+
+  const _Ingredients({
+    required this.categoryNumber,
+    required this.itemNumber,
+  });
+
+  @override
+  State<_Ingredients> createState() => _IngredientsState();
+}
+
+class _IngredientsState extends State<_Ingredients> {
+  late List<bool> checkedStates;
+
+  @override
+  void initState() {
+    super.initState();
+    checkedStates = List.generate(
+      modelList[widget.categoryNumber][widget.itemNumber]['ingredients'].length,
+      (index) => false,
+    );
+    loadCheckedStates();
+  }
+
+  Future<void> loadCheckedStates() async {
+    final prefs = await SharedPreferences.getInstance();
+    final key = 'ingredients_${widget.categoryNumber}_${widget.itemNumber}';
+    final savedStates = prefs.getStringList(key);
+
+    if (savedStates != null) {
+      setState(() {
+        checkedStates = savedStates.map((e) => e == 'true').toList();
+      });
+    }
+  }
+
+  Future<void> saveCheckedStates() async {
+    final prefs = await SharedPreferences.getInstance();
+    final key = 'ingredients_${widget.categoryNumber}_${widget.itemNumber}';
+    await prefs.setStringList(
+      key,
+      checkedStates.map((e) => e.toString()).toList(),
+    );
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return Center(
+      child: ListView.separated(
+        physics: const NeverScrollableScrollPhysics(),
+        shrinkWrap: true,
+        padding: EdgeInsets.all(16),
+        separatorBuilder: (context, index) => SizedBox(height: 16.h),
+        itemCount: modelList[widget.categoryNumber][widget.itemNumber]
+                ['ingredients']
+            .length,
+        itemBuilder: (context, index) => Column(
+          children: [
+            Container(
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(8.r),
+                color: Theme.of(context).colorScheme.surface,
+                boxShadow: [
+                  BoxShadow(
+                    color: Colors.black.withOpacity(0.5),
+                    offset: const Offset(0, 4),
+                    blurRadius: 4,
+                  ),
+                ],
+              ),
+              child: CheckboxListTile(
+                controlAffinity: ListTileControlAffinity.leading,
+                title: Text(modelList[widget.categoryNumber][widget.itemNumber]
+                    ['ingredients'][index]['item']),
+                subtitle: Text(
+                  modelList[widget.categoryNumber][widget.itemNumber]
+                      ['ingredients'][index]['quantity'],
+                  style: TextStyle(
+                    fontWeight: FontWeight.w200,
+                    color: Theme.of(context)
+                        .colorScheme
+                        .onPrimary
+                        .withOpacity(0.75),
+                  ),
+                ),
+                value: checkedStates[index],
+                // Use individual state
+                onChanged: (bool? value) {
+                  setState(() {
+                    checkedStates[index] =
+                        value ?? false; // Update individual state
+                    saveCheckedStates(); // Save states when changed
+                  });
+                },
+              ),
+            ),
+          ],
+        ),
+      ),
+    );
+  }
+}
+
+class _Steps extends StatefulWidget {
+  final int categoryNumber, itemNumber;
+
+  const _Steps({
+    required this.categoryNumber,
+    required this.itemNumber,
+  });
+
+  @override
+  State<_Steps> createState() => _StepsState();
+}
+
+class _StepsState extends State<_Steps> {
+  late List<bool> checkedStates;
+
+  @override
+  void initState() {
+    super.initState();
+    checkedStates = List.generate(
+      modelList[widget.categoryNumber][widget.itemNumber]['steps'].length,
+      (index) => false,
+    );
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return Center(
+      child: ListView.separated(
+        physics: const NeverScrollableScrollPhysics(),
+        shrinkWrap: true,
+        padding: EdgeInsets.all(16),
+        itemCount:
+            modelList[widget.categoryNumber][widget.itemNumber]['steps'].length,
+        separatorBuilder: (context, index) => SizedBox(height: 16.h),
+        itemBuilder: (context, index) => Column(
+          children: [
+            Container(
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(8.r),
+                color: Theme.of(context).colorScheme.surface,
+                boxShadow: [
+                  BoxShadow(
+                    color: Colors.black.withOpacity(0.5),
+                    offset: const Offset(0, 4),
+                    blurRadius: 4,
+                  ),
+                ],
+              ),
+              child: CheckboxListTile(
+                controlAffinity: ListTileControlAffinity.leading,
+                title: Text(modelList[widget.categoryNumber][widget.itemNumber]
+                    ['steps'][index]),
+                value: checkedStates[index],
+                onChanged: (bool? value) {
+                  setState(() {
+                    checkedStates[index] = value ?? false;
+                  });
+                },
+              ),
+            ),
           ],
         ),
       ),

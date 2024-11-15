@@ -1,11 +1,17 @@
 import 'package:app/pages/models/drinks.dart';
 import 'package:app/pages/models/late_night.dart';
 import 'package:app/pages/models/lunch.dart';
+import 'package:app/pages/models/log.dart';
 import 'package:app/pages/models/salad.dart';
 import 'package:app/pages/models/sauces.dart';
 import 'package:app/pages/models/soup.dart';
 import 'package:app/pages/models/sweets.dart';
 import 'package:flutter/material.dart';
+
+
+const String contactUsMsg =
+    'شكراً لك على ثقتك بنا ومشاركتنا رأيك القيم حول تطبيقنا رأيك هو بمثابة هدية لنا، فهو يساعدنا على تطوير التطبيق ليكون من أفضل التطبيقاتً.\n لا تتردد في مشاركتنا أي أفكار أو اقتراحات تراها مناسبة، فنحن نعتبرك شريكاً حقيقياً في رحلتنا.';
+
 
 final List<String> referencesList = [
   'اصوات مصرية',
@@ -34,7 +40,7 @@ final List<List> modelList = [
   soup,
   salad,
   sauces,
-  sweets,
+  desserts,
   drinks,
   lateSnack,
 ];
@@ -58,17 +64,16 @@ final List<String> images = [
 ];
 
 final List<Color> colorsDrawer = [
-  Colors.cyan,
+  Colors.redAccent,
   Colors.pinkAccent,
   Colors.purple,
-  Colors.orange,
-  Colors.teal,
-  Colors.green,
   Colors.amber,
+  Colors.green,
+  Colors.cyan,
+  Colors.teal,
   Colors.deepPurple,
-  Colors.redAccent,
+  Colors.orange,
   Colors.deepOrange,
-  Colors.redAccent
 ];
 final List<String> branchDrawer = [
   'وجبات رئيسية',
@@ -80,6 +85,7 @@ final List<String> branchDrawer = [
   'الليل و اخره',
   'للتواصل و للاضافة و التعديل',
   'مصادر',
+  'السجل'
 ];
 
 final List<String> imagesDrawer = [
@@ -92,4 +98,6 @@ final List<String> imagesDrawer = [
   'assets/svg/moon.svg',
   'assets/svg/request.svg',
   'assets/svg/source.svg',
+  'assets/svg/log.svg',
+
 ];

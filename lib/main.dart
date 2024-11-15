@@ -1,6 +1,7 @@
 import 'package:app/core/design/navigator.dart';
 import 'package:app/core/design/theme.dart';
 import 'package:app/core/logic/service_locator.dart';
+import 'package:app/pages/pages/contact_us2.dart';
 import 'package:app/pages/screens/home_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -23,9 +24,9 @@ class MyApp extends StatelessWidget {
       designSize: const Size(375, 812),
       builder: (context, child) => MaterialApp(
         debugShowCheckedModeBanner: false,
-        title: 'ProjectAmit63',
+        title: 'Recipe',
         navigatorKey: navigatorKey,
-        home: HomeScreen(),
+        home: EmailView(),
         theme: lightMode,
         darkTheme: darkMode,
       ),

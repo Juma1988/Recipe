@@ -48,7 +48,7 @@ flutter:
     - assets/images/soups/
     - assets/images/salads/
     - assets/images/sauces/
-    - assets/images/sweets/
+    - assets/images/desserts/
     - assets/images/drinks/
     - assets/images/late_night/
     - assets/lottie/
@@ -67,6 +67,6 @@ flutter:
       fonts:
         - asset: assets/fonts/Cairo.ttf
 
-#    - family: font003
-#      fonts:
-#        - asset: assets/fonts/JotiOne-Regular.ttf
+    - family: font2
+      fonts:
+        - asset: assets/fonts/Audiowide-Regular.ttf

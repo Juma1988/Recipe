@@ -2,12 +2,14 @@ import 'dart:math';
 
 import 'package:app/core/design/navigator.dart';
 import 'package:app/core/string.dart';
-import 'package:app/pages/screens/details_view.dart';
 import 'package:app/pages/pages/contact_us.dart';
+import 'package:app/pages/pages/log.dart';
 import 'package:app/pages/pages/references.dart';
+import 'package:app/pages/screens/details_view.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 
 class ViewPage extends StatefulWidget {
   final int categoryNumber;
@@ -20,6 +22,29 @@ class ViewPage extends StatefulWidget {
 
 class _ViewPageState extends State<ViewPage> {
   bool rowView = true;
+
+
+  static const rowKey = 'app_view';
+
+
+  @override
+  void initState() {
+    super.initState();
+    loadMode();
+  }
+
+
+  Future<void> loadMode() async {
+    final prefs = await SharedPreferences.getInstance();
+    setState(() {
+      rowView = prefs.getBool(rowKey) ?? true;
+    });
+  }
+
+  Future<void> saveMode(bool newMode) async {
+    final prefs = await SharedPreferences.getInstance();
+    await prefs.setBool(rowKey, newMode);
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -43,6 +68,8 @@ class _ViewPageState extends State<ViewPage> {
                         AppGoto(EmailView());
                       } else if (index == 8) {
                         AppGoto(ReferencesView());
+                      } else if (index == 9) {
+                        AppGoto(LogView());
                       } else {
                         null;
                       }
@@ -71,7 +98,8 @@ class _ViewPageState extends State<ViewPage> {
               ),
             ),
             appBar: AppBar(
-              title: Text(branch[widget.categoryNumber]),
+              title: Text(branch[widget.categoryNumber],style: TextStyle(fontWeight: FontWeight.w500,fontFamily: 'title_font')),
+              centerTitle: true,
               backgroundColor: Theme.of(context).colorScheme.primary,
               actions: [
                 Padding(
@@ -80,6 +108,8 @@ class _ViewPageState extends State<ViewPage> {
                     onPressed: () {
                       setState(() {
                         rowView = !rowView;
+                        saveMode(rowView);
+
                       });
                     },
                     icon: Icon(Icons.view_cozy_outlined),
@@ -351,4 +381,6 @@ class _ViewPageState extends State<ViewPage> {
       child: Text(txt),
     );
   }
+
+
 }

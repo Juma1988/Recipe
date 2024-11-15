@@ -1,4 +1,92 @@
-final sweets = <Map<String, dynamic>>[
+final desserts = <Map<String, dynamic>>[
+  {
+    'level': 'سهل',
+    'prep_time': 10,
+    'cook_time': 25,
+    'stats': false,
+    'ingredients_count': 8,
+    'steps_count': 6,
+    'title_en': 'Easy Night Cake',
+    'title_ar': 'كيكة النايتى',
+    'image': 'assets/images/desserts/night_cake.jpg',
+    'ingredients': [
+      {'item': 'بيضة', 'quantity': '1'},
+      {'item': 'سكر', 'quantity': 'نصف كوب'},
+      {'item': 'لبن', 'quantity': 'نصف كوب'},
+      {'item': 'دقيق', 'quantity': 'كوب'},
+      {'item': 'خل', 'quantity': 'معلقة'},
+      {'item': 'كيك شيف', 'quantity': 'معلقة'},
+      {'item': 'زيت', 'quantity': 'خمس معالق'},
+      {'item': 'كاكاو', 'quantity': 'نصف معلقة'},
+      {'item': 'فانيليا', 'quantity': 'كيس'}
+    ],
+    'steps': [
+      'اخلطي البيض والسكر والزيت والخل والفانيليا واللبن في الخلاط.',
+      'أضيفي الدقيق وكيك الشيف واخلطي.',
+      'اخلطي جزءًا من الخليط مع الكاكاو وضعيه في كيس حلواني.',
+      'سخني الفرن وادهني القالب.',
+      'اسكبي الخليط في القالب وزيني بالكاكاو.',
+      'اخبزي الكيك حتى ينضج.'
+    ]
+  },
+  {
+    'level': 'سهل',
+    'prep_time': 15,
+    'cook_time': 35,
+    'stats': false,
+    'ingredients_count': 8,
+    'steps_count': 8,
+    'title_en': ' Tea Cake',
+    'title_ar': 'كيكة الشاي ',
+    'image': 'assets/images/desserts/tea_cake.jpg', // Replace with actual image path
+    'ingredients': [
+      {'item': 'دقيق', 'quantity': '2 كوب'},
+      {'item': 'سكر', 'quantity': '1 كوب'},
+      {'item': 'زيت نباتي', 'quantity': '1/2 كوب'},
+      {'item': 'حليب', 'quantity': '1 كوب'},
+      {'item': 'بيض', 'quantity': '2 حبة'},
+      {'item': 'بيكنج باودر', 'quantity': '1 ملعقة كبيرة'},
+      {'item': 'فانيليا', 'quantity': '1 ملعقة صغيرة'},
+      {'item': 'ملح', 'quantity': 'رشة'},
+      {'item': 'قشر ليمونة مبشور', 'quantity': 'اختياري'}
+    ],
+    'steps': [
+      'سخني الفرن مسبقاً على درجة حرارة 180 درجة مئوية.',
+      'ادهني قالب الكيك بالزبدة ورشيه بقليل من الدقيق.',
+      'في وعاء كبير انخلي الدقيق وأضيفي إليه البيكنج باودر ورشة الملح.',
+      'في وعاء آخر اخفقي البيض مع السكر.',
+      'أضيفي الزيت والفانيليا واستمري في الخفق.',
+      'أضيفي الحليب وقشر الليمون.',
+      'أضيفي المكونات الجافة تدريجياً واخلطي.',
+      'اسكبي الخليط في القالب واخبزي لمدة 30-35 دقيقة.'
+    ]
+  },
+  {
+    'level': 'سهل',
+    'prep_time': 15,
+    'cook_time': 5,
+    'stats': false,
+    'ingredients_count': 6,
+    'steps_count': 5,
+    'title_en': 'Lazy Biscuit Cake',
+    'title_ar': ' كيك  سريع  بدون فرن\n و بدون شوكولاتة',
+    'image': 'assets/images/desserts/lazy_biscuit_cake.jpg',
+    'ingredients': [
+      {'item': 'بسكويت سادة', 'quantity': '2 علبة'},
+      {'item': 'حليب', 'quantity': 'كوب الا ربع'},
+      {'item': 'سكر', 'quantity': 'نصف كوب'},
+      {'item': 'زبدة', 'quantity': '3 ملعقة طعام'},
+      {'item': 'كاكاو خام', 'quantity': 'نصف كوب'},
+      {'item': 'نسكافيه', 'quantity': 'نصف ملعقة صغيرة'}
+    ],
+    'steps': [
+      'نضع في وعاء عميق الحليب ونضيف السكر والكاكاو والنسكافيه ونحرك المكوّنات حتى تمتزج مع بعضها جيداً ثم ترفع علي نار متوسطة',
+      'عندما يبداء الخليط يغلي تضاف الزبدة و تقلب ثم يرفع الخليط من علي النار و يترك ليهداء ٥ دقائق',
+      'نكسر البسكويت إلى قطع صغيرة متساوية قدر الإمكان .',
+      'نضيف البسكويت إلى الخليط السابق ونقلبه معه .',
+      'في قالب او صينية مناسبة الشكل نضع كيس من النايلون ونصب الخليط ونلفه بالكيس جيداً . ندخل القالب إلى الفريز لمدة أربع ساعات على الأقل . نخرج القالب ونخرج الخليط منه ونقطعه حسب الرغبة ويصبح جاهزاً للتقديم و بالهنا و الشفا'
+    ]
+  },
 
   {
     'level': 'سهل',
@@ -9,7 +97,7 @@ final sweets = <Map<String, dynamic>>[
     'steps_count': 4,
     'title_en': 'Easy Cold Dessert',
     'title_ar': 'حلا بارد سهل وسريع',
-    'image': 'assets/images/sweets/cold_dessert.jpg',
+    'image': 'assets/images/desserts/cold_dessert.jpg',
     'ingredients': [
       {'item': 'باكت بسكوت شاى ساده', 'quantity': '1 باكيت'},
       {'item': 'كاكاو خام', 'quantity': '2 ملعقه كبيره'},
@@ -35,7 +123,7 @@ final sweets = <Map<String, dynamic>>[
     'steps_count': 4,
     'title_en': 'Sablé with Toffee Caramel',
     'title_ar': 'صابلي بالتوفيا كراميل',
-    'image': 'assets/images/sweets/sable_toffee.jpg',
+    'image': 'assets/images/desserts/sable_toffee.jpg',
     'ingredients': [
       {'item': 'زبدة', 'quantity': '250 غرام'},
       {'item': 'زيت', 'quantity': 'نصف كاس'},
@@ -64,7 +152,7 @@ final sweets = <Map<String, dynamic>>[
     'steps_count': 6,
     'title_en': 'Lancashire Biscuits',
     'title_ar': 'بسكوت اللانكشير',
-    'image': 'assets/images/sweets/lancashire_biscuits.jpg',
+    'image': 'assets/images/desserts/lancashire_biscuits.jpg',
     'ingredients': [
       {'item': 'دقيق', 'quantity': 'كوب ونص'},
       {'item': 'نشا', 'quantity': 'نص كوب'},
@@ -93,7 +181,7 @@ final sweets = <Map<String, dynamic>>[
     'steps_count': 7,
     'title_en': 'Economic Tea Biscuits',
     'title_ar': 'بسكويت الشاي',
-    'image': 'assets/images/sweets/tea_biscuits.jpg',
+    'image': 'assets/images/desserts/tea_biscuits.jpg',
     'ingredients': [
       {'item': 'دقيق', 'quantity': '٢ كوب الا ربع'},
       {'item': 'سكر بودرة', 'quantity': 'نصف كوب'},
@@ -124,7 +212,7 @@ final sweets = <Map<String, dynamic>>[
     'steps_count': 5,
     'title_en': 'Mango Custard Konafa',
     'title_ar': 'كنافه بالكاسترد والمانجو',
-    'image': 'assets/images/sweets/mango_custard_konafa.jpg',
+    'image': 'assets/images/desserts/mango_custard_konafa.jpg',
     'ingredients': [
       {'item': 'كنافة', 'quantity': 'نصف كيلو'},
       {'item': 'زبدة سايحة', 'quantity': '225 جم (كوب)'},
@@ -150,7 +238,7 @@ final sweets = <Map<String, dynamic>>[
     'steps_count': 14,
     'title_en': 'Kunafa Burma',
     'title_ar': 'كنافة بورمه',
-    'image': 'assets/images/sweets/kunafa_burma.jpg',
+    'image': 'assets/images/desserts/kunafa_burma.jpg',
     'ingredients': [
       {'item': 'كنافة', 'quantity': '1/2 كيلو'},
       {'item': 'سمن', 'quantity': '1/2 كوب'},
@@ -187,7 +275,7 @@ final sweets = <Map<String, dynamic>>[
     'steps_count': 10,
     'title_en': 'Cheez Cookies',
     'title_ar': 'كوكيز اتشيز',
-    'image': 'assets/images/sweets/cheez_cookies.jpg',
+    'image': 'assets/images/desserts/cheez_cookies.jpg',
     'ingredients': [
       {'item': 'دقيق', 'quantity': '200 غرام'},
       {'item': 'نشا', 'quantity': '50 غرام'},
@@ -225,7 +313,7 @@ final sweets = <Map<String, dynamic>>[
     'steps_count': 8,
     'title_en': 'Nabulsi Hareesa',
     'title_ar': 'الهريسة النابلسية',
-    'image': 'assets/images/sweets/nabulsi_hareesa.jpg',
+    'image': 'assets/images/desserts/nabulsi_hareesa.jpg',
     'ingredients': [
       {'item': 'سميد خشن', 'quantity': '4 أكواب'},
       {'item': 'لبن رائب', 'quantity': '2 كوب'},
@@ -258,7 +346,7 @@ final sweets = <Map<String, dynamic>>[
     'steps_count': 7,
     'title_en': 'Donuts',
     'title_ar': 'الدوناتس',
-    'image': 'assets/images/sweets/donuts.jpg',
+    'image': 'assets/images/desserts/donuts.jpg',
     'ingredients': [
       {'item': 'دقيق', 'quantity': '250 غرام'},
       {'item': 'سكر', 'quantity': '30 غرام'},
@@ -287,7 +375,7 @@ final sweets = <Map<String, dynamic>>[
     'steps_count': 7,
     'title_en': 'Zalabia',
     'title_ar': 'الزلابية',
-    'image': 'assets/images/sweets/zalabia.jpg',
+    'image': 'assets/images/desserts/zalabia.jpg',
     'ingredients': [
       {'item': 'دقيق', 'quantity': '2 كوب'},
       {'item': 'سكر', 'quantity': 'نصف ملعقة'},
@@ -321,7 +409,7 @@ final sweets = <Map<String, dynamic>>[
     'steps_count': 7,
     'title_en': 'Coconut Balls',
     'title_ar': 'كرات جوز الهند',
-    'image': 'assets/images/sweets/coconut_balls.jpg',
+    'image': 'assets/images/desserts/coconut_balls.jpg',
     'ingredients': [
       {'item': 'حليب', 'quantity': 'كوبان'},
       {'item': 'سميد', 'quantity': 'كوب'},
@@ -350,7 +438,7 @@ final sweets = <Map<String, dynamic>>[
     'steps_count': 7,
     'title_en': 'Layali Lubnan with Semolina',
     'title_ar': 'ليالي لبنان بالسميد',
-    'image': 'assets/images/sweets/layali_lubnan.jpg',
+    'image': 'assets/images/desserts/layali_lubnan.jpg',
     'ingredients': [
       {'item': 'حليب سائل', 'quantity': '6 اكواب'},
       {'item': 'سميد خشن', 'quantity': 'كوب'},
@@ -379,7 +467,7 @@ final sweets = <Map<String, dynamic>>[
     'steps_count': 10,
     'title_en': 'Sponge Cake',
     'title_ar': 'الكيك الاسفنجي',
-    'image': 'assets/images/sweets/sponge_cake.jpg',
+    'image': 'assets/images/desserts/sponge_cake.jpg',
     'ingredients': [
       {
         'item': 'بيض بحرارة الغرفة (مفصول الصفار عن البياض)',
@@ -413,7 +501,7 @@ final sweets = <Map<String, dynamic>>[
     'steps_count': 6.0,
     'title_en': 'Balah El Sham',
     'title_ar': 'بلح الشام',
-    'image': 'assets/images/sweets/balah_el_sham.jpg',
+    'image': 'assets/images/desserts/balah_el_sham.jpg',
     'ingredients': [
       {'item': 'دقيق', 'quantity': 'كوب'},
       {'item': 'زيت', 'quantity': 'ربع كوب'},
@@ -444,7 +532,7 @@ final sweets = <Map<String, dynamic>>[
     'steps_count': 7,
     'title_en': 'Chocolate Tiramisu Dessert',
     'title_ar': 'حلى كاكاوي اجرامي',
-    'image': 'assets/images/sweets/chocolate_tiramisu.jpg',
+    'image': 'assets/images/desserts/chocolate_tiramisu.jpg',
     'ingredients': [
       {'item': 'بسكويت شاي', 'quantity': 'علبة'},
       {'item': 'حليب للتغميس', 'quantity': 'كوب'},
@@ -479,7 +567,7 @@ final sweets = <Map<String, dynamic>>[
     'steps_count': 10,
     'title_en': 'Date Filled Biscuits',
     'title_ar': 'بسكويت العجوة',
-    'image': 'assets/images/sweets/date_biscuits.jpg',
+    'image': 'assets/images/desserts/date_biscuits.jpg',
     'ingredients': [
       {'item': 'دقيق منخول', 'quantity': '3 أكواب'},
       {'item': 'نشا', 'quantity': 'ملعقة كبيرة'},
@@ -516,7 +604,7 @@ final sweets = <Map<String, dynamic>>[
     'steps_count': 15,
     'title_en': 'Chocolate Orange Mousse Cake',
     'title_ar': 'كعكة موس الشوكولاتة\nالبرتقال',
-    'image': 'assets/images/sweets/chocolate_orange_cake.jpg',
+    'image': 'assets/images/desserts/chocolate_orange_cake.jpg',
     'ingredients': [
       {'item': 'دقيق لجميع الأغراض', 'quantity': '280 غرام'},
       {'item': 'سكر محبوب', 'quantity': '280 غرام'},
@@ -564,7 +652,7 @@ final sweets = <Map<String, dynamic>>[
     'steps_count': 4,
     'title_en': '7-Minute Cookies Without Mixer',
     'title_ar': 'بسكويت ال ٧ دقايق\nبدون خلاط',
-    'image': 'assets/images/sweets/seven_minute_cookies.jpg',
+    'image': 'assets/images/desserts/seven_minute_cookies.jpg',
     'ingredients': [
       {'item': 'دقيق', 'quantity': '2 كوب'},
       {'item': 'بيض', 'quantity': '1 حبة بدرجة حرارة الغرفة'},
@@ -590,7 +678,7 @@ final sweets = <Map<String, dynamic>>[
     'steps_count': 13,
     'title_en': 'Chocolate Cake',
     'title_ar': 'كعكة الشوكولاتة',
-    'image': 'assets/images/sweets/chocolate_cake_2.jpg',
+    'image': 'assets/images/desserts/chocolate_cake_2.jpg',
     'ingredients': [
       {'item': 'دقيق لجميع الأغراض', 'quantity': '1 3⁄4 أكواب'},
       {'item': 'سكر محبوب', 'quantity': '2 كوب'},
@@ -638,7 +726,7 @@ final sweets = <Map<String, dynamic>>[
     'steps_count': 10,
     'title_en': 'Chocolate Caramel Cupcakes',
     'title_ar': 'كب كيك الشوكولاتة\nبالكراميل',
-    'image': 'assets/images/sweets/chocolate_caramel_cupcake.jpg',
+    'image': 'assets/images/desserts/chocolate_caramel_cupcake.jpg',
     'ingredients': [
       {'item': 'دقيق لجميع الأغراض', 'quantity': '1 كوب'},
       {'item': 'مسحوق الكاكاو', 'quantity': '1/2 كوب'},
@@ -677,7 +765,7 @@ final sweets = <Map<String, dynamic>>[
     'steps_count': 11,
     'title_en': 'Opera Cake',
     'title_ar': 'كعكة الأوبرا',
-    'image': 'assets/images/sweets/opera_cake.jpg',
+    'image': 'assets/images/desserts/opera_cake.jpg',
     'ingredients': [
       {'item': 'بيض كامل', 'quantity': '5 حبات'},
       {'item': 'لوز مطحون', 'quantity': '140 غرام'},
@@ -725,7 +813,7 @@ final sweets = <Map<String, dynamic>>[
     'steps_count': 9,
     'title_en': 'Chocolate Peanut Butter Banana Trifle',
     'title_ar': 'شوكولاتة زبدة الفول\nالسوداني كريمة الموز',
-    'image': 'assets/images/sweets/chocolate_peanut_butter.jpg',
+    'image': 'assets/images/desserts/chocolate_peanut_butter.jpg',
     'ingredients': [
       {'item': 'كريم ثقيل', 'quantity': '2 كوب'},
       {'item': 'سكر بودرة', 'quantity': '1/4 كوب'},
@@ -760,7 +848,7 @@ final sweets = <Map<String, dynamic>>[
     'steps_count': 15,
     'title_en': 'Chocolate Cake with Smooth Chocolate Cream',
     'title_ar': 'كيكة الشوكولاتة بكريمة\nالشوكولاتة الناعمة',
-    'image': 'assets/images/sweets/chocolate_cake_soft.jpg',
+    'image': 'assets/images/desserts/chocolate_cake_soft.jpg',
     'ingredients': [
       {'item': 'دقيق لجميع الأغراض', 'quantity': '2½ كوب'},
       {'item': 'سكر محبوب', 'quantity': '2½ كوب'},
@@ -807,7 +895,7 @@ final sweets = <Map<String, dynamic>>[
     'steps_count': 9,
     'title_en': 'Ammonia Cookies (Brazeek)',
     'title_ar': 'قرص النشادر (برازق كبيرة)',
-    'image': 'assets/images/sweets/ammonia_cookies.jpg',
+    'image': 'assets/images/desserts/ammonia_cookies.jpg',
     'ingredients': [
       {'item': 'لبن', 'quantity': '2 كوب'},
       {'item': 'سمنة', 'quantity': '1 كوب'},
@@ -842,7 +930,7 @@ final sweets = <Map<String, dynamic>>[
     'steps_count': 21,
     'title_en': 'Black Velvet Cake',
     'title_ar': 'كعكة المخملية السوداء',
-    'image': 'assets/images/sweets/black_velvet_cake.jpg',
+    'image': 'assets/images/desserts/black_velvet_cake.jpg',
     'ingredients': [
       {'item': 'زبدة غير مملحة', 'quantity': '6 ملعقة كبيرة'},
       {'item': 'ملح البحر الرفيع', 'quantity': '3/4 ملعقة صغيرة'},
@@ -899,7 +987,7 @@ final sweets = <Map<String, dynamic>>[
     'steps_count': 10,
     'title_en': 'Chocolate Eclair Cake',
     'title_ar': 'كعكة إكلير بالشوكولاتة',
-    'image': 'assets/images/sweets/chocolate_eclair.jpg',
+    'image': 'assets/images/desserts/chocolate_eclair.jpg',
     'ingredients': [
       {'item': 'مزيج بودنغ الفانيليا الفوري', 'quantity': '2 عبوة (3.5 أونصة)'},
       {'item': 'الإضافات المخفوقة (COOL WHIP)', 'quantity': 'حاوية (8 أونصة)'},
@@ -929,7 +1017,7 @@ final sweets = <Map<String, dynamic>>[
     'steps_count': 7,
     'title_en': 'Caramel Cake',
     'title_ar': 'كعكة الكراميل',
-    'image': 'assets/images/sweets/caramel_cake.jpg',
+    'image': 'assets/images/desserts/caramel_cake.jpg',
     'ingredients': [
       {'item': 'مزيج كيك الشوكولاتة', 'quantity': '1 علبة'},
       {'item': 'مكونات كيك ميكس', 'quantity': 'حسب توجيهات البكج'},
@@ -959,7 +1047,7 @@ final sweets = <Map<String, dynamic>>[
     'steps_count': 12,
     'title_en': 'Cream Kunafa',
     'title_ar': 'كنافة بالقشطة',
-    'image': 'assets/images/sweets/cream_kunafa.jpg',
+    'image': 'assets/images/desserts/cream_kunafa.jpg',
     'ingredients': [
       {'item': 'كنافة', 'quantity': '1/2 كيلو'},
       {'item': 'سمن سائح', 'quantity': 'كوب'},
@@ -995,7 +1083,7 @@ final sweets = <Map<String, dynamic>>[
     'steps_count': 8,
     'title_en': 'Sweet Cream Goulash',
     'title_ar': 'الجلاش الحلو بالكريمة',
-    'image': 'assets/images/sweets/sweet_cream_goulash.jpg',
+    'image': 'assets/images/desserts/sweet_cream_goulash.jpg',
     'ingredients': [
       {'item': 'جلاش', 'quantity': 'لفة كاملة'},
       {'item': 'سكر', 'quantity': 'كوب ونصف'},
@@ -1024,7 +1112,7 @@ final sweets = <Map<String, dynamic>>[
     'steps_count': 4,
     'title_en': "Sawabe' Zainab (Zainab's Fingers)",
     'title_ar': 'صوابع زينب',
-    'image': 'assets/images/sweets/sawabe_zainab.jpg',
+    'image': 'assets/images/desserts/sawabe_zainab.jpg',
     'ingredients': [
       {'item': 'دقيق', 'quantity': '2 كوب ونص'},
       {'item': 'دقيق سميد (سيمولينا)', 'quantity': 'كوب الا ربع'},
@@ -1054,7 +1142,7 @@ final sweets = <Map<String, dynamic>>[
     'steps_count': 10,
     'title_en': 'Sweet Cream Cheese Goulash with Cinnamon',
     'title_ar': 'الجلاش الحلو بالجبنة\nالكريمي والقرفة',
-    'image': 'assets/images/sweets/sweet_cream_cheese_goulash.jpg',
+    'image': 'assets/images/desserts/sweet_cream_cheese_goulash.jpg',
     'ingredients': [
       {'item': 'عجينة جلاش', 'quantity': '1 عبوة'},
       {'item': 'جبنة كريمي', 'quantity': '1 عبوة'},
@@ -1086,7 +1174,7 @@ final sweets = <Map<String, dynamic>>[
     'steps_count': 8,
     'title_en': 'Balah El Sham',
     'title_ar': 'بلح الشام',
-    'image': 'assets/images/sweets/balah_el_sham.jpg',
+    'image': 'assets/images/desserts/balah_el_sham.jpg',
     'ingredients': [
       {'item': 'ماء', 'quantity': '2 كوب'},
       {'item': 'سكر', 'quantity': '2 معلقة كبيرة'},
@@ -1120,7 +1208,7 @@ final sweets = <Map<String, dynamic>>[
     'steps_count': 6,
     'title_en': 'Rowaney Cake',
     'title_ar': 'كيكة الرواني',
-    'image': 'assets/images/sweets/rowaney_cake.jpg',
+    'image': 'assets/images/desserts/rowaney_cake.jpg',
     'ingredients': [
       {'item': 'بيض', 'quantity': '4 حبات'},
       {'item': 'زيت', 'quantity': '2 ملعقة كبيرة'},
@@ -1153,7 +1241,7 @@ final sweets = <Map<String, dynamic>>[
     'steps_count': 4,
     'title_en': 'Orange Cake',
     'title_ar': 'كيكة البرتقال بالخلاط',
-    'image': 'assets/images/sweets/orange_cake.jpg',
+    'image': 'assets/images/desserts/orange_cake.jpg',
     'ingredients': [
       {'item': 'دقيق كيك', 'quantity': '٣ أكواب (٣٧٠ جرام)'},
       {'item': 'بيض كبير', 'quantity': '٤ حبات بدرجة حرارة الغرفة'},
@@ -1186,7 +1274,7 @@ final sweets = <Map<String, dynamic>>[
     'steps_count': 5,
     'title_en': 'Basbousa',
     'title_ar': 'البسبوسة',
-    'image': 'assets/images/sweets/basbousa.jpg',
+    'image': 'assets/images/desserts/basbousa.jpg',
     'ingredients': [
       {'item': 'سميد بسبوسة', 'quantity': '2 كوب'},
       {'item': 'سكر أبيض', 'quantity': '1 كوب'},

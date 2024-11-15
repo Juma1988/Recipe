@@ -13,21 +13,17 @@ class ReferencesView extends StatelessWidget {
       textDirection: TextDirection.rtl,
       child: Scaffold(
         appBar: AppBar(
-          title: Row(
-            children: [
-              Text(
-                'مراجع',
-                style: TextStyle(fontFamily: 'title_font'),
-              ),
-              Spacer(),
+            title: Text('مراجع',
+                style: TextStyle(
+                    fontFamily: 'title_font', fontWeight: FontWeight.w500)),
+            centerTitle: true,
+            actions: [
               IconButton(
                   onPressed: () {
                     appShowMsg('يمكن النقر علي الصورة للوصول الي الصفحة');
                   },
                   icon: Icon(Icons.info_outline))
-            ],
-          ),
-        ),
+            ]),
         body: GridView.builder(
           padding: EdgeInsets.all(16),
           itemCount: referencesList.length,
@@ -62,7 +58,7 @@ class ReferencesView extends StatelessWidget {
                   SizedBox(height: 16.h),
                   Expanded(
                       child: Text(
-                        referencesList[index],
+                    referencesList[index],
                     style: TextStyle(
                         fontFamily: 'title_font',
                         fontWeight: FontWeight.w500,
