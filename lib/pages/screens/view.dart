@@ -2,7 +2,7 @@ import 'dart:math';
 
 import 'package:app/core/design/navigator.dart';
 import 'package:app/core/string.dart';
-import 'package:app/pages/pages/contact_us.dart';
+import 'package:app/pages/pages/contact_us2.dart';
 import 'package:app/pages/pages/log.dart';
 import 'package:app/pages/pages/references.dart';
 import 'package:app/pages/screens/details_view.dart';

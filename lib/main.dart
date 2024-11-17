@@ -1,7 +1,7 @@
 import 'package:app/core/design/navigator.dart';
 import 'package:app/core/design/theme.dart';
 import 'package:app/core/logic/service_locator.dart';
-import 'package:app/pages/pages/contact_us2.dart';
+import 'package:app/pages/pages/contact_us.dart';
 import 'package:app/pages/screens/home_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -26,7 +26,7 @@ class MyApp extends StatelessWidget {
         debugShowCheckedModeBanner: false,
         title: 'Recipe',
         navigatorKey: navigatorKey,
-        home: EmailView(),
+        home: HomeScreen(),
         theme: lightMode,
         darkTheme: darkMode,
       ),
