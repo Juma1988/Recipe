@@ -21,6 +21,7 @@ dependencies:
   pull_to_refresh: ^2.0.0
   mailer: ^5.0.0
   lottie: ^3.1.2
+  flutter_launcher_icons: 0.14.1
   #  salomon_bottom_bar: ^3.3.2
   #  email_validator: ^3.0.0
   #  bloc: ^8.1.4
@@ -32,7 +33,10 @@ dependencies:
   #  flutter_bloc: ^8.1.6
   #  awesome_drawer_bar: ^1.2.0
 
-
+flutter_icons:
+  android: true
+  ios: true
+  image_path: 'assets/icon.png'
 
 dev_dependencies:
   flutter_test:
