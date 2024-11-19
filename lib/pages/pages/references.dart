@@ -58,12 +58,12 @@ class ReferencesView extends StatelessWidget {
                   SizedBox(height: 16.h),
                   Expanded(
                       child: Text(
-                    referencesList[index],
-                    style: TextStyle(
-                        fontFamily: 'title_font',
-                        fontWeight: FontWeight.w500,
-                        fontSize: 18),
-                  ))
+                        referencesList[index],
+                        style: TextStyle(
+                            fontFamily: 'title_font',
+                            fontWeight: FontWeight.w500,
+                            fontSize: 18),
+                      ))
                 ],
               ),
             ),

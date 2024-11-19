@@ -1,6 +1,12 @@
 final log = <Map<String, dynamic>>[
   {
     'status': 1,
+    'title': 'تم اضافة 14 مشروب',
+    'body': '',
+    'time': 'Novamber 18, 2024',
+  },
+  {
+    'status': 1,
     'title': 'تم التعديل علي صفحة التواصل',
     'body': '',
     'time': 'Novamber 15, 2024',

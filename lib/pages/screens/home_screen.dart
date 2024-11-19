@@ -200,8 +200,8 @@ class _Grid2 extends StatelessWidget {
         },
         onDoubleTap: () {
           AppGoto(DetailsView(
-            itemNumber: Random().nextInt(modelList[index].length),
-            categoryNumber: index - 1,
+            itemNumber: Random().nextInt(modelList[index+1].length),
+            categoryNumber: index +1,
           ));
         },
         child: Container(
@@ -226,7 +226,7 @@ class _Grid2 extends StatelessWidget {
                 width: 60.w,
                 height: 60.h,
                 colorFilter: mode ?
-                    ColorFilter.mode(colorsDrawer[index + 1], BlendMode.srcIn): ColorFilter.mode(Color(0xFFFFFFFF), BlendMode.srcIn),
+                ColorFilter.mode(colorsDrawer[index + 1], BlendMode.srcIn): ColorFilter.mode(Color(0xFFFFFFFF), BlendMode.srcIn),
               ),
               SizedBox(height: 12.h),
               Text(

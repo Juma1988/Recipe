@@ -2,7 +2,7 @@ import 'dart:math';
 
 import 'package:app/core/design/navigator.dart';
 import 'package:app/core/string.dart';
-import 'package:app/pages/pages/contact_us2.dart';
+import 'package:app/pages/pages/contact_us.dart';
 import 'package:app/pages/pages/log.dart';
 import 'package:app/pages/pages/references.dart';
 import 'package:app/pages/screens/details_view.dart';
@@ -23,16 +23,13 @@ class ViewPage extends StatefulWidget {
 class _ViewPageState extends State<ViewPage> {
   bool rowView = true;
 
-
   static const rowKey = 'app_view';
-
 
   @override
   void initState() {
     super.initState();
     loadMode();
   }
-
 
   Future<void> loadMode() async {
     final prefs = await SharedPreferences.getInstance();
@@ -98,7 +95,9 @@ class _ViewPageState extends State<ViewPage> {
               ),
             ),
             appBar: AppBar(
-              title: Text(branch[widget.categoryNumber],style: TextStyle(fontWeight: FontWeight.w500,fontFamily: 'title_font')),
+              title: Text(branch[widget.categoryNumber],
+                  style: TextStyle(
+                      fontWeight: FontWeight.w500, fontFamily: 'title_font')),
               centerTitle: true,
               backgroundColor: Theme.of(context).colorScheme.primary,
               actions: [
@@ -109,7 +108,6 @@ class _ViewPageState extends State<ViewPage> {
                       setState(() {
                         rowView = !rowView;
                         saveMode(rowView);
-
                       });
                     },
                     icon: Icon(Icons.view_cozy_outlined),
@@ -381,6 +379,4 @@ class _ViewPageState extends State<ViewPage> {
       child: Text(txt),
     );
   }
-
-
 }

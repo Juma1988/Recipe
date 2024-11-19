@@ -12,7 +12,7 @@ class LogView extends StatelessWidget {
       textDirection: TextDirection.rtl,
       child: Scaffold(
         appBar: AppBar(title: Text('السجل',style: TextStyle(fontWeight: FontWeight.w500,fontFamily: 'title_font'),),
-        centerTitle: true,),
+          centerTitle: true,),
         body: ListView.separated(
           padding: EdgeInsets.all(16.r),
           separatorBuilder: (context, index) => SizedBox(height: 12.h),
@@ -59,20 +59,20 @@ class LogView extends StatelessWidget {
                         ),
                         log[index]['time'].toString().isEmpty
                             ? Text('غير معروف',
-                                style: TextStyle(
-                                    fontSize: 12.sp,
-                                    fontWeight: FontWeight.w500))
+                            style: TextStyle(
+                                fontSize: 12.sp,
+                                fontWeight: FontWeight.w500))
                             : Text(log[index]['time'],
-                                style: TextStyle(
-                                    fontSize: 12.sp,
-                                    fontWeight: FontWeight.w500)),
+                            style: TextStyle(
+                                fontSize: 12.sp,
+                                fontWeight: FontWeight.w500)),
                         log[index]['body'].toString().isEmpty
                             ? Text('-')
                             : Text(log[index]['body'],
-                                style: TextStyle(
-                                    fontSize: 12.sp,
-                                    fontWeight: FontWeight.w500,
-                                    color: Color(0xFF989898))),
+                            style: TextStyle(
+                                fontSize: 12.sp,
+                                fontWeight: FontWeight.w500,
+                                color: Color(0xFF989898))),
                       ],
                     ),
                   ),
