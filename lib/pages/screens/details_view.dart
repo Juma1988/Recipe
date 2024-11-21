@@ -200,18 +200,31 @@ class _IngredientsState extends State<_Ingredients> {
               ),
               child: CheckboxListTile(
                 controlAffinity: ListTileControlAffinity.leading,
-                title: Text(modelList[widget.categoryNumber][widget.itemNumber]
-                    ['ingredients'][index]['item']),
+                title: Text(
+                  modelList[widget.categoryNumber][widget.itemNumber]
+                      ['ingredients'][index]['item'],
+                  style: TextStyle(
+                      color: checkedStates[index]
+                          ? Colors.grey
+                          : Theme.of(context).colorScheme.onPrimary,
+                      decoration: checkedStates[index]
+                          ? TextDecoration.lineThrough
+                          : null),
+                ),
                 subtitle: Text(
                   modelList[widget.categoryNumber][widget.itemNumber]
                       ['ingredients'][index]['quantity'],
                   style: TextStyle(
-                    fontWeight: FontWeight.w200,
-                    color: Theme.of(context)
-                        .colorScheme
-                        .onPrimary
-                        .withOpacity(0.75),
-                  ),
+                      fontWeight: FontWeight.w200,
+                      color: checkedStates[index]
+                          ? Colors.grey
+                          : Theme.of(context)
+                              .colorScheme
+                              .onPrimary
+                              .withOpacity(0.75),
+                      decoration: checkedStates[index]
+                          ? TextDecoration.lineThrough
+                          : null),
                 ),
                 value: checkedStates[index],
                 // Use individual state
@@ -281,8 +294,17 @@ class _StepsState extends State<_Steps> {
               ),
               child: CheckboxListTile(
                 controlAffinity: ListTileControlAffinity.leading,
-                title: Text(modelList[widget.categoryNumber][widget.itemNumber]
-                    ['steps'][index]),
+                title: Text(
+                  modelList[widget.categoryNumber][widget.itemNumber]['steps']
+                      [index],
+                  style: TextStyle(
+                      color: checkedStates[index]
+                          ? Colors.grey
+                          : Theme.of(context).colorScheme.onPrimary,
+                      decoration: checkedStates[index]
+                          ? TextDecoration.lineThrough
+                          : null),
+                ),
                 value: checkedStates[index],
                 onChanged: (bool? value) {
                   setState(() {

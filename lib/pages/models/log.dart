@@ -1,6 +1,13 @@
 final log = <Map<String, dynamic>>[
   {
     'status': 1,
+    'title': 'اضافة',
+    'body': 'the checked-off ingredients separately from the unchecked ones, possibly with a line through the checked-off ingredients for better visual differentiation',
+    'time': 'Novamber 22, 2024',
+  },
+
+  {
+    'status': 1,
     'title': 'تم اضافة 14 مشروب',
     'body': '',
     'time': 'Novamber 18, 2024',
